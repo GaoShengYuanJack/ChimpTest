@@ -1,1 +1,2 @@
-# ChimpTest
+# EP0706 : INTRODUCTION TO PSYCHOLOGY
+ChimpTest
