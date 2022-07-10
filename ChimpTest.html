@@ -1,0 +1,482 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chimp Test</title>
+	
+	<script>
+		
+		currentAnswer = 1;
+		
+		answer1 = 0;
+		answer2 = 0;
+		answer3 = 0;
+		answer4 = 0;
+		answer5 = 0;
+		answer6 = 0;
+		answer7 = 0;
+		answer8 = 0;
+		answer9 = 0;
+		
+		function startQuick() {
+			
+			clear();
+			set();
+			
+			setTimeout(clear, 450);
+			
+		}
+		
+		function startSlow() {
+			
+			clear();
+			set();
+			
+			setTimeout(clear, 3400);
+			
+		}
+		
+		function startVerySlow() {
+			
+			clear();
+			set();
+			
+			setTimeout(clear, 6900);
+			
+		}
+
+        function startNormal() {
+			
+			clear();
+			set();
+			
+			setTimeout(clear, 1900);
+			
+		}
+        
+        function startSlower() {
+			
+			clear();
+			set();
+			
+			setTimeout(clear, 4900);
+			
+		}
+		
+		function clear() {
+			
+		currentAnswer = 1;
+			
+			i = 1;
+			while (i <= 36) {
+				
+				document.getElementById(i).innerHTML = "&nbsp;";
+				
+				i = i+1;
+			}
+		}
+		
+		function set() {
+			
+			clear();
+			
+			i = 1;
+			while (i <= 9) {
+				
+				a = 0;
+				while (a == 0) {
+					id = getRandomInt(36)+1;
+					if (document.getElementById(id).innerHTML == "&nbsp;") {
+						document.getElementById(id).innerHTML = i;
+						a = 1;
+						
+						if (i == 1) {
+							answer1 = id;
+						}
+						if (i == 2) {
+							answer2 = id;
+						}
+						if (i == 3) {
+							answer3 = id;
+						}
+						if (i == 4) {
+							answer4 = id;
+						}
+						if (i == 5) {
+							answer5 = id;
+						}
+						if (i == 6) {
+							answer6 = id;
+						}
+						if (i == 7) {
+							answer7 = id;
+						}
+						if (i == 8) {
+							answer8 = id;
+						}
+						if (i == 9) {
+							answer9 = id;
+						}
+						
+					}
+				}
+				
+				i = i+1;
+			}
+			
+		}
+	
+		function click1() {
+		check(1);
+	}
+		function click2() {
+		check(2);
+	}
+		function click3() {
+		check(3);
+	}
+		function click4() {
+		check(4);
+	}
+		function click5() {
+		check(5);
+	}
+		function click6() {
+		check(6);
+	}
+		function click7() {
+		check(7);
+	}
+		function click8() {
+		check(8);
+	}
+		function click9() {
+		check(9);
+	}
+		function click10() {
+		check(10);
+	}
+		function click11() {
+		check(11);
+	}
+		function click12() {
+		check(12);
+	}
+		function click13() {
+		check(13);
+	}
+		function click14() {
+		check(14);
+	}
+		function click15() {
+		check(15);
+	}
+		function click16() {
+		check(16);
+	}
+		function click17() {
+		check(17);
+	}
+		function click18() {
+		check(18);
+	}
+		function click19() {
+		check(19);
+	}
+		function click20() {
+		check(20);
+	}
+		function click21() {
+		check(21);
+	}
+		function click22() {
+		check(22);
+	}
+		function click23() {
+		check(23);
+	}
+		function click24() {
+		check(24);
+	}
+		function click25() {
+		check(25);
+	}
+		function click26() {
+		check(26);
+	}
+		function click27() {
+		check(27);
+	}
+		function click28() {
+		check(28);
+	}
+		function click29() {
+		check(29);
+	}
+		function click30() {
+		check(30);
+	}
+		function click31() {
+		check(31);
+	}
+		function click32() {
+		check(32);
+	}
+		function click33() {
+		check(33);
+	}
+		function click34() {
+		check(34);
+	}
+		function click35() {
+		check(35);
+	}
+		function click36() {
+		check(36);
+	}
+		
+		function check(value) {
+			
+			correct = 0;
+			
+			if (currentAnswer == 1) {
+				if (answer1 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 2) {
+				if (answer2 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 3) {
+				if (answer3 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 4) {
+				if (answer4 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 5) {
+				if (answer5 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 6) {
+				if (answer6 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 7) {
+				if (answer7 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 8) {
+				if (answer8 == value) {
+					correct = 1;
+				}
+			}
+			if (currentAnswer == 9) {
+				if (answer9 == value) {
+					correct = 1;
+				}
+			}
+			
+			if (correct == 1) {
+			document.getElementById(value).innerHTML = currentAnswer;
+				if (currentAnswer <= 9) {
+					currentAnswer = currentAnswer+1;
+				}
+				if (currentAnswer == 10) {
+					alert("Good job!");
+				}
+			} else {
+					alert("Incorrect!");
+				showAllAnswers();
+			}
+			
+		}
+		
+		
+		function showAllAnswers() {
+			document.getElementById(answer1).innerHTML = "1";
+			document.getElementById(answer2).innerHTML = "2";
+			document.getElementById(answer3).innerHTML = "3";
+			document.getElementById(answer4).innerHTML = "4";
+			document.getElementById(answer5).innerHTML = "5";
+			document.getElementById(answer6).innerHTML = "6";
+			document.getElementById(answer7).innerHTML = "7";
+			document.getElementById(answer8).innerHTML = "8";
+			document.getElementById(answer9).innerHTML = "9";
+		}
+		
+		
+	function getRandomInt(max) {
+  		return Math.floor(Math.random() * Math.floor(max));
+	}
+		
+	</script>
+	
+</head>
+
+<body>
+	
+	
+	<br><br>
+    
+    <big>
+	EP0706 : INTRODUCTION TO PSYCHOLOGY
+		</big>
+        <br>
+    <big>
+	Topic: Memory
+		</big>
+        <br>
+        
+	<big>
+	I made this test inspired by the Chimp Test found in the [MindField] VSauce Video, <a href="https://www.youtube.com/watch?v=ktkjUjcZid0">The Cognitive Tradeoff Hypothesis S3 (Ep 1)</a>
+		
+		</big>
+	
+	<br>
+	
+	<br>
+	
+	Tap Below to try, and see how you compare! 
+	<br>
+
+	Tap a time button, 0.5, 2.0, 3.5, 5.0 or 7.0, memorize the numbers before they dissapear, then tap the tiles that the numbers were in, in-order, and try to reach 9. Enjoy!
+	
+	
+	<br><br>
+	
+	<button onClick="startQuick()" style="
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin:10px;
+										  height: 40px; width: 80px;">0.5s</button>
+                                          
+    
+	<button onClick="startNormal()" style="
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin:10px;
+										  height: 40px; width: 80px;">2.0s</button>
+	
+	<button onClick="startSlow()" style="
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin:10px;
+										  height: 40px; width: 80px;">3.5s</button>
+                                          
+	<button onClick="startSlower()" style="
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin:10px;
+										  height: 40px; width: 80px;">5.0s</button>
+	
+	<button onClick="startVerySlow()" style="
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin:10px;
+										  height: 40px; width: 80px;">7.0s</button>
+	
+	<br><br>
+	
+	<hr>
+	
+	<br>
+	
+	
+	<style>
+	
+		.slot {
+			background-color:cadetblue; width: 20px; height: 20px; display: inline-block; padding: 10px; font-size: 18px; text-align: center; vertical-align: middle;
+		}
+	
+	</style>
+	
+	
+	<style>
+      blink, .blink {
+      animation: blinker 1s linear infinite;
+      }
+      @keyframes blinker {  
+      50% { opacity: 0; }
+      }
+    </style>
+	
+	
+	<span class="slot" id="1" onClick="click1()">&nbsp;</span>
+	<span class="slot" id="2" onClick="click2()">&nbsp;</span>
+	<span class="slot" id="3" onClick="click3()">&nbsp;</span>
+	<span class="slot" id="4" onClick="click4()">&nbsp;</span>
+	<span class="slot" id="5" onClick="click5()">&nbsp;</span>
+	<span class="slot" id="6" onClick="click6()">&nbsp;</span>
+	<br>&nbsp;<br>
+	
+	<span class="slot" id="7" onClick="click7()">&nbsp;</span>
+	<span class="slot" id="8" onClick="click8()">&nbsp;</span>
+	<span class="slot" id="9" onClick="click9()">&nbsp;</span>
+	<span class="slot" id="10" onClick="click10()">&nbsp;</span>
+	<span class="slot" id="11" onClick="click11()">&nbsp;</span>
+	<span class="slot" id="12" onClick="click12()">&nbsp;</span>
+	<br>&nbsp;<br>
+	
+	<span class="slot" id="13" onClick="click13()">&nbsp;</span>
+	<span class="slot" id="14" onClick="click14()">&nbsp;</span>
+	<span class="slot" id="15" onClick="click15()">&nbsp;</span>
+	<span class="slot" id="16" onClick="click16()">&nbsp;</span>
+	<span class="slot" id="17" onClick="click17()">&nbsp;</span>
+	<span class="slot" id="18" onClick="click18()">&nbsp;</span>
+	<br>&nbsp;<br>
+	
+	<span class="slot" id="19" onClick="click19()">&nbsp;</span>
+	<span class="slot" id="20" onClick="click20()">&nbsp;</span>
+	<span class="slot" id="21" onClick="click21()">&nbsp;</span>
+	<span class="slot" id="22" onClick="click22()">&nbsp;</span>
+	<span class="slot" id="23" onClick="click23()">&nbsp;</span>
+	<span class="slot" id="24" onClick="click24()">&nbsp;</span>
+	<br>&nbsp;<br>
+	
+	<span class="slot" id="25" onClick="click25()">&nbsp;</span>
+	<span class="slot" id="26" onClick="click26()">&nbsp;</span>
+	<span class="slot" id="27" onClick="click27()">&nbsp;</span>
+	<span class="slot" id="28" onClick="click28()">&nbsp;</span>
+	<span class="slot" id="29" onClick="click29()">&nbsp;</span>
+	<span class="slot" id="30" onClick="click30()">&nbsp;</span>
+	<br>&nbsp;<br>
+	
+	<span class="slot" id="31" onClick="click31()">&nbsp;</span>
+	<span class="slot" id="32" onClick="click32()">&nbsp;</span>
+	<span class="slot" id="33" onClick="click33()">&nbsp;</span>
+	<span class="slot" id="34" onClick="click34()">&nbsp;</span>
+	<span class="slot" id="35" onClick="click35()">&nbsp;</span>
+	<span class="slot" id="36" onClick="click36()">&nbsp;</span>
+	<br>&nbsp;<br>
+	
+</body>
+</html>
